@@ -416,9 +416,11 @@ keywait,z                                                            ;|
 keywait,z,d t0.5 ; Increase the "t" value for a longer timeout.      ;|
 if errorlevel                                                        ;|
 {                                                                    ;|
+    IME_SET(0)						             ;|
     send, {Z}30{enter}                                               ;|
     return                                                           ;|
 }                                                                    ;|
+IME_SET(0)                                                           ;|
 send, {Z}60{enter}                                                   ;|
 return                                                               ;|
 ;---------------------------------------------------------------------o
@@ -598,6 +600,23 @@ Return                                                                          
 ;-----------------------------------------------------------------------o
 
 
+; ======================================================================o              
+;                     切換輸入法中英文 1:中文  0:英文                  ;|
+;-----------------------------------------------------------------------o
+IME_SET(setSts, WinTitle="")                                           ;|
+{                                                                      ;|
+    ifEqual WinTitle,,  SetEnv,WinTitle,A                              ;|
+    WinGet,hWnd,ID,%WinTitle%                                          ;|
+    DefaultIMEWnd := DllCall("imm32\ImmGetDefaultIMEWnd", Uint,hWnd, Uint)
+                                                                       ;|
+    ;Message : WM_IME_CONTROL  wParam:IMC_SETOPENSTATUS                ;|
+    DetectSave := A_DetectHiddenWindows                                ;|                                   
+    DetectHiddenWindows,ON                                             ;|
+    SendMessage 0x283, 0x006,setSts,,ahk_id %DefaultIMEWnd%            ;|
+    DetectHiddenWindows,%DetectSave%                                   ;|
+    Return ErrorLevel                                                  ;|
+}                                                                      ;|
+;-----------------------------------------------------------------------o
 
 ; ================================================================o
 ; boss key 待完成 
