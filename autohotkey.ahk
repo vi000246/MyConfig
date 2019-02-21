@@ -1,28 +1,3 @@
-
-;=====================================================================o
-;         Summary:                                                    |
-;o----------------------o---------------------------------------------o
-;|CapsLock;             | {ESC}  Especially Convient for vim user     |
-;|CaspLock + `          | {CapsLock}CapsLock Switcher as a Substituent|
-;|CapsLock + hjklwb     | Vim-Style Cursor Mover                      |
-;|CaspLock + iobf       | Convient Home/End PageUp/PageDn             |
-;|CaspLock + nm,.       | Convient Delete Controller                  |
-;|CapsLock + Direction  | Mouse Move                                  |
-;|CapsLock + Enter      | Mouse Click                                 |
-;|CaspLock + {F1}~{F6}  | Media Volume Controller                     |
-;|CapsLock + qsa        | Windows & Tags Control                      |
-;|CapsLock + ;'[]       | Convient Key Mapping                        |
-;|CaspLock + egr        | Frequently Used Programs (Self Defined)     |
-;|CaspLock + 123456     | Dev-Hotkey for Visual Studio (Self Defined) |
-;|CapsLock + 67890-=    | Shifter as Shift                            |
-;|Win      + \          | 關閉螢幕                                     |
-;|Win      + A          | 切換音訊                                     |
-;|Alt      + P          | 開啟PTT                                      |
-;|Ctrl + Alt + 1        | 設為半透明                                   |
-;|Ctrl + Alt + 2        | 還原透明度                                   |
-;=====================================================================o
-
-
 ;定義路徑
 	VisualStudio := "C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe"
 	SourceTree := "C:\Users\user\AppData\Local\SourceTree\app-2.1.2.5\SourceTree.exe"
@@ -80,31 +55,59 @@ WinActivate,A
 WinSet,Transparent,255,A
 return
 
+;================================ 快速開啟程式設定  ==========================
+
+;win+d 開啟cmd.exe
+	#d::RunOrActivate("cmd.exe") 
+
+;win+v 開啟Visual Studio
+	#v::RunOrActivate(VisualStudio) 
+
+;win+c 開啟Chrome
+	#c::RunOrActivate("chrome.exe") 
+
+;win+s 開啟SourceTree
+	#s::RunOrActivate(SourceTree) 
+
+;win+Q 開啟LinqPad
+	#Q::RunOrActivate(LinqPad) 
+
+;win+M 開啟SqlServer
+	#M::RunOrActivate(SQLServer) 
+
+;win+O 開啟one note
+	#o::RunOrActivate(OneNote) 
+
 ;=====================================================================o
-;           快速開啟程式設定                                           |
+;                   Feng Ruohang's AHK Script                         | 
+;                      CapsLock Enhancement                           |
 ;---------------------------------------------------------------------o
-                                                                     ;|
-;win+d 開啟cmd.exe                                                   ;|   
-	#d::RunOrActivate("cmd.exe")                                 ;|                      
-                                                                     ;|
-;win+v 開啟Visual Studio                                             ;|         
-	#v::RunOrActivate(VisualStudio)                              ;|                         
-                                                                     ;|
-;win+c 開啟Chrome                                                    ;|  
-	#c::RunOrActivate("chrome.exe")                              ;|                         
-                                                                     ;|
-;win+s 開啟SourceTree                                                ;|      
-	#s::RunOrActivate(SourceTree)                                ;|                       
-                                                                     ;|
-;win+Q 開啟LinqPad                                                   ;|   
-	#Q::RunOrActivate(LinqPad)                                   ;|                    
-                                                                     ;|
-;win+M 開啟SqlServer                                                 ;|     
-	#M::RunOrActivate(SQLServer)                                 ;|                      
-                                                                     ;|
-;win+O 開啟one note                                                  ;|    
-	#o::RunOrActivate(OneNote)                                   ;|                    
-;---------------------------------------------------------------------o
+;Description:                                                         |
+;    This Script is wrote by Feng Ruohang via AutoHotKey Script. It   |
+; Provieds an enhancement towards the "Useless Key" CapsLock, and     |
+; turns CapsLock into an useful function Key just like Ctrl and Alt   |
+; by combining CapsLock with almost all other keys in the keyboard.   |
+;                                                                     |
+;Summary:                                                             |
+;o----------------------o---------------------------------------------o
+;|CapsLock;             | {ESC}  Especially Convient for vim user     |
+;|CaspLock + `          | {CapsLock}CapsLock Switcher as a Substituent|
+;|CapsLock + hjklwb     | Vim-Style Cursor Mover                      |
+;|CaspLock + iobf       | Convient Home/End PageUp/PageDn             |
+;|CaspLock + nm,.       | Convient Delete Controller                  |
+;|CapsLock + zxcvau     | Windows-Style Editor                        |
+;|CapsLock + Direction  | Mouse Move                                  |
+;|CapsLock + Enter      | Mouse Click                                 |
+;|CaspLock + {F1}~{F6}  | Media Volume Controller                     |
+;|CapsLock + qs         | Windows & Tags Control                      |
+;|CapsLock + ;'[]       | Convient Key Mapping                        |
+;|CaspLock + der        | Frequently Used Programs (Self Defined)     |
+;|CaspLock + 123456     | Dev-Hotkey for Visual Studio (Self Defined) |
+;|CapsLock + 67890-=    | Shifter as Shift                            |
+;-----------------------o---------------------------------------------o
+;|Use it whatever and wherever you like. Hope it help                 |
+;=====================================================================o
+
 
 ;=====================================================================o
 ;                       CapsLock Initializer                         ;|
@@ -349,6 +352,29 @@ CapsLock & n:: Send, ^{BS}                                           ;|
 
 
 ;=====================================================================o
+;                            CapsLock Editor                         ;|
+;-----------------------------------o---------------------------------o
+;                     CapsLock + z  |  Ctrl + z (Cancel 還原)        ;|
+;                     CapsLock + x  |  Ctrl + x (Cut)                ;|
+;                     CapsLock + c  |  Ctrl + c (Copy)               ;|
+;                     CapsLock + v  |  Ctrl + z (Paste)              ;|
+;                     CapsLock + a  |  Ctrl + a (Select All)         ;|
+;                     CapsLock + u  |  Ctrl + y (Yeild 徹銷還原)     ;|
+;                     CapsLock + w  |  Ctrl + Right(Move as [vim: w]);|
+;                     CapsLock + b  |  Ctrl + Left (Move as [vim: b]) conflict disabled;|
+;-----------------------------------o---------------------------------o
+CapsLock & z:: Send, ^z                                              ;|
+CapsLock & x:: Send, ^x                                              ;|
+CapsLock & c:: Send, ^c                                              ;|
+CapsLock & v:: Send, ^v                                              ;|
+CapsLock & a:: Send, ^a                                              ;|
+CapsLock & u:: Send, ^y                                              ;|
+CapsLock & w:: Send, ^{Right}                                        ;|
+;CapsLock & b:: Send, ^{Left}                                         ;|
+;---------------------------------------------------------------------o
+
+
+;=====================================================================o
 ;                       CapsLock Media Controller                    ;|
 ;-----------------------------------o---------------------------------o
 ;                    CapsLock + F1  |  Volume_Mute                   ;|
@@ -374,7 +400,7 @@ CapsLock & F6:: Send, {Media_Stop}                                   ;|
 ;                     CapsLock + q  |  Ctrl + W   (Close Tag)        ;|
 ;   (Disabled)  Alt + CapsLock + s  |  AltTab     (Switch Windows)   ;|
 ;               Alt + CapsLock + q  |  Ctrl + Tab (Close Windows)    ;|
-;                     CapsLock + a  |  AppsKey    (Menu Key)         ;|
+;                     CapsLock + g  |  AppsKey    (Menu Key)         ;|
 ;-----------------------------------o---------------------------------o
 CapsLock & s::Send, ^{Tab}                                           ;|
 ;-----------------------------------o                                ;|
@@ -389,19 +415,19 @@ else {                                                               ;|
 }                                                                    ;|
 return                                                               ;|
 ;-----------------------------------o                                ;|
-CapsLock & a:: Send, {AppsKey}                                       ;|
+CapsLock & g:: Send, {AppsKey}                                       ;|
 ;---------------------------------------------------------------------o
 
 
 ;=====================================================================o
 ;                        CapsLock Self Defined Area                  ;|
 ;-----------------------------------o---------------------------------o
-;     CapsLock + e  |  (search everything 需自訂快捷ctrl+shift+alt+f);|
-;              CapsLock + g  |  Open Search Engine                   ;|
-;              CapsLock + r  |  Open Shell                           ;|
+;                     CapsLock + d  |  Alt + d(Dictionary)           ;|
+;                     CapsLock + e  |  Open Search Engine            ;|
+;                     CapsLock + r  |  Open Shell                    ;|
 ;-----------------------------------o---------------------------------o
-CapsLock & e:: Send, ^+!f                                            ;|
-CapsLock & g::                                                       ;|
+CapsLock & d:: Send, !d                                              ;|
+CapsLock & e::                                                       ;|
 InputBox, Search, Google, What would you like to search?             ;|
 	if not ErrorLevel                                            ;|
 	{                                                            ;|
@@ -462,11 +488,11 @@ CapsLock & 0:: Send,+0                                               ;|
 
 ; ================================================================================================================o
 ;開啟程式或切換至已開啟的視窗                                                                                    ;|
-;    Target - 要開啟的程式 例: Calc.exe 或 C:\Progs\Bobo.exe                                            	 ;|
+;    Target - 要開啟的程式 例: Calc.exe 或 C:\Progs\Bobo.exe                                           		 ;|
 ;    WinTitle - Optional title of the window to activate.  Programs like                                         ;|
 ;       MS Outlook might have multiple windows open (main window and email                                       ;|
 ;       windows).  This parm allows activating a specific window.                                    	         ;|
-;範例                                           							  	 ;|
+;範例                                           								 ;|
 ; Example uses...												 ;|
 ;#b::RunOrActivate("C:\Program Files\Seapine\TestTrack Pro\TestTrack Pro Client.exe")                            ;|
 ;#c::RunOrActivate("control panel")                                      				         ;|
@@ -485,109 +511,46 @@ CapsLock & 0:: Send,+0                                               ;|
 ;#-::RunOrActivate("mspaint.exe")                                      					         ;|
 ;#=::RunOrActivate("calc.exe")                                    					         ;|
 ; ----------------------------------------------------------------------------------------------------------------o
-RunOrActivate(Target, WinTitle = "")										 ;|
+RunOrActivate(Target, WinTitle = "")										                                     ;|
 {                                                                                                                ;|
-	; Get the filename without a path                                                                        ;|
-	SplitPath, Target, TargetNameOnly                                                                        ;|
-                                                                       						 ;|
-	Process, Exist, %TargetNameOnly%                                                                         ;|
-	If ErrorLevel > 0                                                                       		 ;|
-		PID = %ErrorLevel%                                                                  		 ;|
-	Else                                                                       				 ;|
-		Run, %Target%, , , PID                                                                           ;|
-                                                                       						 ;|
-	; At least one app (Seapine TestTrack wouldn't always become the active                                  ;|
-	; window after using Run), so we always force a window activate.                                         ;|
-	; Activate by title if given, otherwise use PID.                                                         ;|
-	If WinTitle <>                                                                        			 ;|
-	{                                                                       				 ;|
-		SetTitleMatchMode, 2                                                                             ;|
-		WinWait, %WinTitle%, , 3                                                                       	 ;|
-		TrayTip, , Activating Window Title "%WinTitle%" (%TargetNameOnly%)                               ;|
-		WinActivate, %WinTitle%                                                                       	 ;|
-	}                                                                       				 ;|
-	Else                                                                       				 ;|
-	{                                                                       				 ;|
-		WinWait, ahk_pid %PID%, , 3                                                                      ;|
-		TrayTip, , Activating PID %PID% (%TargetNameOnly%)                                               ;|
-		WinActivate, ahk_pid %PID%                                                                       ;|
-	}                                                                       				 ;|
-                                                                       						 ;|
-                                                                       						 ;|
-	SetTimer, RunOrActivateTrayTipOff, 1500                                                                  ;|
-}                                                                       					 ;|					   	   	   	     ;|
+	; Get the filename without a path                                                                            ;|
+	SplitPath, Target, TargetNameOnly                                                                            ;|
+                                                                       						                     ;|
+	Process, Exist, %TargetNameOnly%                                                                             ;|
+	If ErrorLevel > 0                                                                       		             ;|
+		PID = %ErrorLevel%                                                                  		             ;|
+	Else                                                                       				                     ;|
+		Run, %Target%, , , PID                                                                                   ;|
+                                                                       						                     ;|
+	; At least one app (Seapine TestTrack wouldn't always become the active                                      ;|
+	; window after using Run), so we always force a window activate.                                             ;|
+	; Activate by title if given, otherwise use PID.                                                             ;|
+	If WinTitle <>                                                                        		                 ;|
+	{                                                                       				                     ;|
+		SetTitleMatchMode, 2                                                                 	                 ;|
+		WinWait, %WinTitle%, , 3                                                                       	         ;|
+		TrayTip, , Activating Window Title "%WinTitle%" (%TargetNameOnly%)                                       ;|
+		WinActivate, %WinTitle%                                                                       	         ;|
+	}                                                                       				                     ;|
+	Else                                                                       				                     ;|
+	{                                                                       				                     ;|
+		WinWait, ahk_pid %PID%, , 3                                                                              ;|
+		TrayTip, , Activating PID %PID% (%TargetNameOnly%)                                                       ;|
+		WinActivate, ahk_pid %PID%                                                                               ;|
+	}                                                                       				                     ;|
+                                                                       						                     ;|
+                                                                       						                     ;|
+	SetTimer, RunOrActivateTrayTipOff, 1500                                                                      ;|
+}                                                                       					                     ;|
 RunOrActivateTrayTipOff:                                                                                         ;|
-	SetTimer, RunOrActivateTrayTipOff, off                                                                   ;|
-	TrayTip                                                                       				 ;|
-Return                                                                       					 ;|
-                                                                      						 ;|
+	SetTimer, RunOrActivateTrayTipOff, off                                                                       ;|
+	TrayTip                                                                       			                     ;|
+Return                                                                       					                 ;|
+                                                                      						                     ;|
 ;-----------------------------------------------------------------------------------------------------------------o
-
 
 
 ; ================================================================================================================o
-;                   使用win+a切換喇叭跟耳機                                                                      ;|
-;                   需要下載 nircmd 並複製到 c:\windows\system32                                                 ;| 
-;                   要將setdefaultsounddevice後的字串改為右下角喇叭圖示的播放裝置名稱                            ;|
-;                   需要到音效卡驅動的選單勾選 "將前面板與後面板的輸出裝置分為兩個獨立的音訊流"                  ;|
-;-----------------------------------------------------------------------------------------------------------------o
-#a::
-                                                                                                            ;|
-                                                                                                                 ;|
-  	toggle:=!toggle ; This toggles the variable between true/false                                           ;|
-        if toggle                                                                                                ;|
-
-	{                                                                                                        ;|
-		Run nircmd setdefaultsounddevice "喇叭"                                                          ;|
-		soundToggleBox("Speakers")                                                                       ;|
-	}                                                                                                        ;|
-	else                                                                                                     ;|
-	{                                                                                                        ;|
-		Run nircmd setdefaultsounddevice "Realtek HD Audio 2nd output"                                   ;|
-		soundToggleBox("Headphones")                                                                     ;|
-	}                                                                                                        ;|
-Return                                                                                                           ;|
-; Display sound toggle GUI                                                                                       ;|
-soundToggleBox(Device)
-{                                                                                         ;|
-	IfWinExist, soundToggleWin                                                                               ;|
-	{                                                                                                        ;|
-		Gui, destroy                                                                                     ;|
-	}                                                                                                        ;|
-                                                                                                                 ;|
-	Gui, +ToolWindow -Caption +0x400000 +alwaysontop                                                         ;|
-	Gui, Add, text, x35 y8, Default sound: %Device%                                                          ;|
-	SysGet, screenx, 0                                                                                       ;|
-	SysGet, screeny, 1                                                                                       ;|
-	xpos:=screenx-275                                                                                        ;|
-	ypos:=screeny-100                                                                                        ;|
-	Gui, Show, NoActivate x%xpos% y%ypos% h30 w200, soundToggleWin                                           ;|
-                                                                                                                 ;|
-	SetTimer,soundToggleClose, 2000                                                                          ;|
-}
-                                                                                                               ;|
-soundToggleClose:                                                                                                ;|
-    SetTimer,soundToggleClose, off                                                                               ;|
-    Gui, destroy                                                                                                 ;|
-Return                                                                                                           ;|
-;-----------------------------------------------------------------------------------------------------------------o
-
-
-; ======================================================================o              
-;                     Win+\    關閉螢幕                                ;|
-;-----------------------------------------------------------------------o
-#\::                                                                   ;|
-	BlockInput On                                                  ;|
-	SendMessage 0x112, 0xF170, 2, , Program Manager  ; Monitor off ;|
-	SendMessage 0x112, 0xF140, 0, , Program Manager  ; Screensaver ;|
-	Sleep 2000                                                     ;|
-	BlockInput Off                                                 ;|
-	return                                                         ;|
-;-----------------------------------------------------------------------o
-
-
-
-; ================================================================o
 ; boss key 待完成 
 ;-----------------------------------------------------------------o
 
