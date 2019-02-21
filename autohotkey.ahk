@@ -11,7 +11,7 @@
 ;|CaspLock + {F1}~{F6}  | Media Volume Controller                     |
 ;|CapsLock + qsa        | Windows & Tags Control                      |
 ;|CapsLock + ;'[]       | Convient Key Mapping                        |
-;|CaspLock + egrc       | Frequently Used Programs (Self Defined)     |
+;|CaspLock + egrcz       | Frequently Used Programs (Self Defined)     |
 ;|CaspLock + 123456     | Dev-Hotkey for Visual Studio (Self Defined) |
 ;|CapsLock + 67890-=    | Shifter as Shift                            |
 ;|Win      + \          | 關閉螢幕                                    |
@@ -397,6 +397,7 @@ CapsLock & a:: Send, {AppsKey}                                       ;|
 ;              CapsLock + g  |  Open Search Engine                   ;|
 ;              CapsLock + r  |  Open Shell                           ;|
 ;              CapsLock + c  |  Open Chrome                          ;|
+;              CapsLock + z  |  PTT搜尋推文(按一下搜30 按兩下搜60)   ;|
 ;-----------------------------------o---------------------------------o
 CapsLock & e:: Send, ^+!f                                            ;|
 CapsLock & g::                                                       ;|
@@ -406,8 +407,20 @@ InputBox, Search, Google, What would you like to search?             ;|
 		run http://www.google.com/search?q=%Search%          ;|
 	}                                                            ;|
 	return                                                       ;|
+----------------------------o                                        ;|
 CapsLock & r:: Run Powershell                                        ;|
 CapsLock & c::RunOrActivate("chrome.exe")                            ;|
+----------------------------o                                        ;|
+CapsLock & z::                                                       ;|
+keywait,z                                                            ;|
+keywait,z,d t0.5 ; Increase the "t" value for a longer timeout.      ;|
+if errorlevel                                                        ;|
+{                                                                    ;|
+    send, {Z}30{enter}                                               ;|
+    return                                                           ;|
+}                                                                    ;|
+send, {Z}60{enter}                                                   ;|
+return                                                               ;|
 ;---------------------------------------------------------------------o
 
 
