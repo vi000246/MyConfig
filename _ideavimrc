@@ -157,3 +157,102 @@ set surround
 
 " 屏幕滾動時在光標上下方保留5行預覽代碼
 set so=5
+
+"=================Resharper===============
+
+"添加註釋
+:nnoremap gc :vsc ReSharper.ReSharper_LineComment<CR>
+:vnoremap gc :vsc ReSharper.ReSharper_LineComment<CR><Esc><Esc>
+
+"Search Everywhere/Go to Type 去到任何地方
+:nnoremap ,se :vsc ReSharper.ReSharper_GotoType<CR>
+
+"Go To File 搜尋文件名稱
+:nnoremap ,gf :vsc ReSharper.ReSharper_GotoFile<CR>
+
+"Go to file member 搜尋此文件成員
+:nnoremap ,gm :vsc ReSharper.ReSharperr_GotoFileMember<CR>
+
+"Go to text 搜尋文字
+:nnoremap ,gt :vsc ReSharper.ReSharper_GotoText<CR>
+
+"Navigate To 列出各種Go to 清單
+:nnoremap ,ag :vsc ReSharper.ReSharper_NavigateTo<CR>
+
+"Go to declaration 移至類別定義的地方
+:nnoremap ,gd :vsc ReSharper.ReSharper_GotoDeclaration<CR>
+
+"Go to usage 前往所有引用
+:nnoremap ,gu :vsc ReSharper.ReSharper_GotoUsage<CR>
+
+"Go to containing declaration 導航到當前行屬於的方法簽名處，或者所屬類的定義處
+:nnoremap ,gcd :vsc ReSharper.ReSharper_GotoContainingDeclaration<CR>
+
+"Go to implementation 前往類別實作 避免前往interface
+:nnoremap ,gi :vsc ReSharper.ReSharper_GotoImplementations<CR>
+
+"Go to related files 移至相關文件，用來查找css js等
+:nnoremap ,grf :vsc ReSharper.ReSharper_GotoRelatedFiles<CR>
+
+"Go to next member/tag
+:nnoremap ,gnm :vsc ReSharper.ReSharper_GotoNextMethod<CR>
+
+"Go to previous member/tag
+:nnoremap ,gpm :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
+
+"Find usages 列出所有引用
+:nnoremap ,fu :vsc ReSharper.ReSharper_FindUsages<CR>
+
+"Find Results window
+:nnoremap ,frw :vsc ReSharper.ReSharper_ShowFindResults<CR>
+
+"View recent edits 查看最近編輯的檔案
+:nnoremap ,vre :vsc ReSharper.ReSharper_GotoRecentEdits<CR>
+
+"File structure 檔案結構
+:nnoremap ,fs :vsc ReSharper.ReSharper_ShowCodeStructure<CR>
+
+"Stack Trace Explorer 堆疊視窗
+:nnoremap ,est :vsc ReSharper.ReSharper_ExploreStackTrace<CR>
+
+"Locate in Solution/Assembly Explorer 定位至方案總管
+:nnoremap ,lis :vsc ReSharper.ReSharper_LocateInSolutionOrAssemblyExplorer<CR>
+
+"Go to Action 搜尋各種Resharper 命令
+:nnoremap ,ga :vsc ReSharper.ReSharper_GotoAction<CR>
+
+"Surround with template 快速插入程式碼
+:nnoremap ,sw :vsc ReSharper.ReSharper_SurroundWith<CR>
+
+"Generate code  alt+insert 產生程式碼
+:nnoremap ,gc :vsc ReSharper.ReSharper_Generate<CR>
+
+"Inspect this 查看字段或屬性在那兒被賦值
+:nnoremap ,it :vsc ReSharper.ReSharper_InspectThis<CR>
+
+"View recent files 開啟最近文件 顯示最近編輯的文件
+:nnoremap ,vrf :vsc ReSharper.ReSharper_GotoRecentFiles<CR>
+
+"Quick documentation 快速查看方法簽章
+:nnoremap ,qd :vsc ReSharper.ReSharper_QuickDoc<CR>
+
+"highlighting 選起來的單字
+:nnoremap ,hl :vsc ReSharper.ReSharper_HighlightUsages<CR>
+
+"Code cleanup 自動format code 符合code style
+:nnoremap ,cc :vsc ReSharper.ReSharper_CleanupCode<CR>
+
+"Move code up 將程式碼往上移
+:nnoremap ,mu :vsc ReSharper.ReSharper_MoveUp<CR>
+
+"Move code down 將程式碼往下移
+:nnoremap ,md :vsc ReSharper.ReSharper_MoveDown<CR>
+
+"Move code left
+:nnoremap ,ml :vsc ReSharper.ReSharper_MoveLeft<CR>
+
+"Move code right
+:nnoremap ,mr :vsc ReSharper.ReSharper_MoveRight<CR>
+
+"Select containing declaration 選擇當前行所屬的類或方法
+:nnoremap ,scd :vsc ReSharper.ReSharper_SelectContainingDeclaration<CR>
