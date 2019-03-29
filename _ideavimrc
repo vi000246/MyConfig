@@ -1,0 +1,258 @@
+set ai 
+"自動縮進寬度
+set sw=4 
+set ts=4 
+"關閉高亮顯示
+set nohlsearch   
+set is
+"忽略大小寫
+set ignorecase
+"設定顏色主題
+:colorscheme desert
+
+set backspace=indent,eol,start
+"默認的剪貼寄存器
+set clipboard=unnamed
+"顯示行號
+set number
+
+:nnoremap . .<Esc>
+
+"重新生成選中項目的解決方案快捷鍵
+:nnoremap ,b :vsc Build.RebuildSelection<CR>
+
+"退出插入模式
+:inoremap jj <esc>
+:nnoremap <c-j> <c-w>j
+:nnoremap <c-k> <c-w>k
+:nnoremap <c-l> <c-w>l
+:nnoremap <c-h> <c-w>h
+
+" 讓vim的yank跟ctrl+c獨立  ctrl+c或ctrl+x複製的東西 就用ctrl+v貼上
+" 用d c s不會yank 用y或x複製 就用p貼上
+:nnoremap d "_d
+:nnoremap c "_c
+:nnoremap C "_C
+:nnoremap S "_S
+:nnoremap s "_s
+:nnoremap x "xx
+:vnoremap x "xx
+:nnoremap X "xX
+:vnoremap X "xX
+:vnoremap d "_d
+:nnoremap D "_D
+:nnoremap y "xy
+:vnoremap y "xy
+:nnoremap p "xp
+:vnoremap p "xp
+
+"在tab間切換
+:nnoremap ,t :vsc Window.NextTab<CR>
+:nnoremap ,r :vsc Window.PreviousTab<CR>
+
+:nnoremap ,n :vsc Window.NextDocumentWindow<CR>
+:nnoremap ,p :vsc Window.PreviousDocumentWindow<CR>
+
+"居中顯示查找結果
+:nnoremap n nzz
+:nnoremap N Nzz
+:nnoremap * *zz
+:nnoremap # #zz
+"去定義
+:nnoremap gd <C-]>zz
+
+"gq->== 整理代碼格式
+:nnoremap gq ==
+:vnoremap gq ==
+
+"重新載入config
+:nnoremap ,sv :source C:\Users\yich.lin\_vsvimrc<CR>
+"開啟config
+:nnoremap ,ev :e C:\Users\yich.lin\_vsvimrc<CR>
+
+" ==================================================
+" Show all the provided actions via `:actionlist`
+" ==================================================
+nnoremap ,su :action ShowUsages<CR>
+nnoremap ,fu :action FindUsages<CR>
+nnoremap ,<space> a<space><ESC>:action CodeCompletion<CR>
+inoremap ,<space> <space><ESC>:action CodeCompletion<CR>
+
+" <C-N>
+nnoremap <C-n> :action GotoClass<CR>
+inoremap <C-n> <ESC>:action GotoClass<CR>
+nnoremap ,gc :action GotoClass<CR>
+inoremap ,gc <ESC>:action GotoClass<CR>
+" <C-e>
+nnoremap ,cf :action RecentFiles<CR>
+" <C-S-N>
+nnoremap <C-S-n> :action GotoFile<CR>
+inoremap <C-S-n> <ESC>:action GotoFile<CR>
+
+" <C-o>
+nnoremap <C-o> :action OverrideMethods<CR>
+" <C-F12>
+nnoremap ,fs :action FileStructurePopup<CR>
+" <C-P>
+nnoremap <C-P> :action ParameterInfo<CR>
+inoremap <C-P> <ESC>:action ParameterInfo<CR>a
+" <C-Q>
+nnoremap <C-q> :action QuickJavaDoc<CR>
+
+" <C-H> Hierarchy Class
+nnoremap <C-H> :action TypeHierarchy<CR>
+" <C-S-H> Hierarchy Method
+nnoremap <C-S-H> :action MethodHierarchy<CR>
+nnoremap ,hm :action MethodHierarchy<CR>
+" as mouse clicked
+nnoremap ,gd :action GotoDeclaration<CR>
+inoremap ,gd <ESC>:action GotoDeclaration<CR>
+" mean going to see the real implementation,aka method
+nnoremap ,gi :action GotoImplementation<CR>
+
+" back
+nnoremap ,gb :action Back<CR>
+" forward
+nnoremap ,fw :action Forward<CR>
+" <C-A-L>
+nnoremap <C-A-l> :action ReformatCode<CR>
+inoremap <C-A-l> <ESC>:action ReformatCode<CR>a
+nnoremap ,fm :action ReformatCode<CR>
+inoremap ,fm <ESC>:action ReformatCode<CR>a
+
+nnoremap ,oi :action OptimizeImports<CR>
+nnoremap <space>oi :action OptimizeImports<CR>
+
+" built in search looks better
+map <C-f> <ESC>:action Find<CR>
+" comment
+nnoremap ,cc :action CommentByLineComment<CR>
+" pretend :) uncomment 
+nnoremap ,cu :action CommentByLineComment<CR>
+
+nnoremap ,br :action ToggleLineBreakpoint<CR>
+" see all breakpoints
+nnoremap ,abr :action ViewBreakpoints<CR>
+
+nnoremap ,fs :action ToggleFullScreen<CR>
+
+nnoremap ,sew :action SearchEverywhere<CR>
+
+nnoremap ,cmd :action ChooseRunConfiguration<CR>
+
+nnoremap ,sel :action ActivateTerminalToolWindow<CR>
+" <C-S-F<F4>> close windows just popup
+nnoremap ,cw :action CloseActiveTab<CR>
+" <C-j>
+inoremap <C-j> <ESC>:action InsertLiveTemplate<CR>
+
+" <C-R>
+nnoremap <C-r> :action Redo<CR>
+
+
+" ==================================================
+" Emulated Vim Plugins
+" ==================================================
+set surround
+
+" 屏幕滾動時在光標上下方保留5行預覽代碼
+set so=5
+
+"=================Resharper===============
+
+"添加註釋
+:nnoremap gc :vsc ReSharper.ReSharper_LineComment<CR>
+:vnoremap gc :vsc ReSharper.ReSharper_LineComment<CR><Esc><Esc>
+
+"Search Everywhere/Go to Type 去到任何地方
+:nnoremap ,se :vsc ReSharper.ReSharper_GotoType<CR>
+
+"Go To File 搜尋文件名稱
+:nnoremap ,gf :vsc ReSharper.ReSharper_GotoFile<CR>
+
+"Go to file member 搜尋此文件成員
+:nnoremap ,gm :vsc ReSharper.ReSharperr_GotoFileMember<CR>
+
+"Go to text 搜尋文字
+:nnoremap ,gt :vsc ReSharper.ReSharper_GotoText<CR>
+
+"Navigate To 列出各種Go to 清單
+:nnoremap ,ag :vsc ReSharper.ReSharper_NavigateTo<CR>
+
+"Go to declaration 移至類別定義的地方
+:nnoremap ,gd :vsc ReSharper.ReSharper_GotoDeclaration<CR>
+
+"Go to usage 前往所有引用
+:nnoremap ,gu :vsc ReSharper.ReSharper_GotoUsage<CR>
+
+"Go to containing declaration 導航到當前行屬於的方法簽名處，或者所屬類的定義處
+:nnoremap ,gcd :vsc ReSharper.ReSharper_GotoContainingDeclaration<CR>
+
+"Go to implementation 前往類別實作 避免前往interface
+:nnoremap ,gi :vsc ReSharper.ReSharper_GotoImplementations<CR>
+
+"Go to related files 移至相關文件，用來查找css js等
+:nnoremap ,grf :vsc ReSharper.ReSharper_GotoRelatedFiles<CR>
+
+"Go to next member/tag
+:nnoremap ,gnm :vsc ReSharper.ReSharper_GotoNextMethod<CR>
+
+"Go to previous member/tag
+:nnoremap ,gpm :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
+
+"Find usages 列出所有引用
+:nnoremap ,fu :vsc ReSharper.ReSharper_FindUsages<CR>
+
+"Find Results window
+:nnoremap ,frw :vsc ReSharper.ReSharper_ShowFindResults<CR>
+
+"View recent edits 查看最近編輯的檔案
+:nnoremap ,vre :vsc ReSharper.ReSharper_GotoRecentEdits<CR>
+
+"File structure 檔案結構
+:nnoremap ,fs :vsc ReSharper.ReSharper_ShowCodeStructure<CR>
+
+"Stack Trace Explorer 堆疊視窗
+:nnoremap ,est :vsc ReSharper.ReSharper_ExploreStackTrace<CR>
+
+"Locate in Solution/Assembly Explorer 定位至方案總管
+:nnoremap ,lis :vsc ReSharper.ReSharper_LocateInSolutionOrAssemblyExplorer<CR>
+
+"Go to Action 搜尋各種Resharper 命令
+:nnoremap ,ga :vsc ReSharper.ReSharper_GotoAction<CR>
+
+"Surround with template 快速插入程式碼
+:nnoremap ,sw :vsc ReSharper.ReSharper_SurroundWith<CR>
+
+"Generate code  alt+insert 產生程式碼
+:nnoremap ,gc :vsc ReSharper.ReSharper_Generate<CR>
+
+"Inspect this 查看字段或屬性在那兒被賦值
+:nnoremap ,it :vsc ReSharper.ReSharper_InspectThis<CR>
+
+"View recent files 開啟最近文件 顯示最近編輯的文件
+:nnoremap ,vrf :vsc ReSharper.ReSharper_GotoRecentFiles<CR>
+
+"Quick documentation 快速查看方法簽章
+:nnoremap ,qd :vsc ReSharper.ReSharper_QuickDoc<CR>
+
+"highlighting 選起來的單字
+:nnoremap ,hl :vsc ReSharper.ReSharper_HighlightUsages<CR>
+
+"Code cleanup 自動format code 符合code style
+:nnoremap ,cc :vsc ReSharper.ReSharper_CleanupCode<CR>
+
+"Move code up 將程式碼往上移
+:nnoremap ,mu :vsc ReSharper.ReSharper_MoveUp<CR>
+
+"Move code down 將程式碼往下移
+:nnoremap ,md :vsc ReSharper.ReSharper_MoveDown<CR>
+
+"Move code left
+:nnoremap ,ml :vsc ReSharper.ReSharper_MoveLeft<CR>
+
+"Move code right
+:nnoremap ,mr :vsc ReSharper.ReSharper_MoveRight<CR>
+
+"Select containing declaration 選擇當前行所屬的類或方法
+:nnoremap ,scd :vsc ReSharper.ReSharper_SelectContainingDeclaration<CR>
