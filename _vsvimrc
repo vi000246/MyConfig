@@ -133,8 +133,8 @@ set number
 "Go to text 搜尋文字
 :nnoremap ,gt :vsc ReSharper.ReSharper_GotoText<CR>
 
-"Navigate To 列出各種Go to 清單
-:nnoremap ,ag :vsc ReSharper.ReSharper_NavigateTo<CR>
+"移動到最近編輯的地方
+:nnoremap ,gre :vsc ReSharper.ReSharper_GotoRecentEdits<CR>
 
 "Go to declaration 移至類別定義的地方
 :nnoremap ,gd :vsc ReSharper.ReSharper_GotoDeclaration<CR>
@@ -154,10 +154,19 @@ set number
 "Go to next member/tag
 :nnoremap ,gnm :vsc ReSharper.ReSharper_GotoNextMethod<CR>
 
-"Go to previous member/tag
+"Go to Action 搜尋各種Resharper 命令
+:nnoremap ,ga :vsc ReSharper.ReSharper_GotoAction<CR>
+
+"Generate code  alt+insert 產生程式碼
+:nnoremap ,gc :vsc ReSharper.ReSharper_Generate<CR>
+
+"Go to previous member/tag  HotKey:Alt+Down/Up
 :nnoremap ,gpm :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
 
+"Navigate To 列出各種Go to 清單
+:nnoremap ,ag :vsc ReSharper.ReSharper_NavigateTo<CR>
 "Find usages 列出所有引用
+
 :nnoremap ,fu :vsc ReSharper.ReSharper_FindUsages<CR>
 
 "Find Results window
@@ -165,6 +174,9 @@ set number
 
 "View recent edits 查看最近編輯的檔案
 :nnoremap ,vre :vsc ReSharper.ReSharper_GotoRecentEdits<CR>
+
+"移至最近編輯的位置
+:nnoremap ,gle :vsc ReSharper.ReSharper_GotoLastEditLocation<CR>
 
 "File structure 檔案結構
 :nnoremap ,fs :vsc ReSharper.ReSharper_ShowCodeStructure<CR>
@@ -175,14 +187,12 @@ set number
 "Locate in Solution/Assembly Explorer 定位至方案總管
 :nnoremap ,lis :vsc ReSharper.ReSharper_LocateInSolutionOrAssemblyExplorer<CR>
 
-"Go to Action 搜尋各種Resharper 命令
-:nnoremap ,ga :vsc ReSharper.ReSharper_GotoAction<CR>
-
 "Surround with template 快速插入程式碼
 :nnoremap ,sw :vsc ReSharper.ReSharper_SurroundWith<CR>
 
-"Generate code  alt+insert 產生程式碼
-:nnoremap ,gc :vsc ReSharper.ReSharper_Generate<CR>
+"Parameter Information
+:nnoremap ,pi :vsc ReSharper.ReSharper_ParameterInfoShow<CR>
+
 
 "Inspect this 查看字段或屬性在那兒被賦值
 :nnoremap ,it :vsc ReSharper.ReSharper_InspectThis<CR>
