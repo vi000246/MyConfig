@@ -1,7 +1,6 @@
 "需要這樣才能載入_vimrc 記得改user name
 source C:\Users\yich.lin\_vimrc
 
-
 "重新生成選中項目的解決方案快捷鍵
 :nnoremap ,b :vsc Build.RebuildSelection<CR>
 

@@ -8,6 +8,9 @@ colorscheme slate
 
 set ai 
 
+"設定工作目錄為當前文件
+:nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
+
 "自動縮進寬度
 set sw=4 
 set ts=4 
@@ -21,6 +24,12 @@ set backspace=indent,eol,start
 set clipboard=unnamed
 "顯示行號
 set number
+
+" 让配置变更立即生效
+:autocmd BufWritePost $MYVIMRC source $MYVIMRC
+
+"自动保存
+set autowrite 
 
 "退出插入模式
 :inoremap jj <esc>
