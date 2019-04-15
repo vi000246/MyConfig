@@ -1,3 +1,27 @@
+"忽略大小寫
+:set smartcase
+:set ignorecase
+
+"設定配色
+syntax on
+colorscheme slate
+
+set ai 
+
+"自動縮進寬度
+set sw=4 
+set ts=4 
+"關閉高亮顯示
+set nohlsearch   
+set is
+
+
+set backspace=indent,eol,start
+"默認的剪貼寄存器
+set clipboard=unnamed
+"顯示行號
+set number
+
 "退出插入模式
 :inoremap jj <esc>
 :nnoremap <c-j> <c-w>j

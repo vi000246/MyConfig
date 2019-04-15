@@ -11,13 +11,6 @@ set guifont=Source\ Code\ Pro:h18
 "設定自動重整檔案 checktime會定時呼叫lh鍵，用來觸發autoread
 " 如果想移到底部可以將lh改成G，當cursor閒置就會自動移到底部
 set autoread | au CursorHold * checktime | call feedkeys("lh")
-"設定配色
-syntax on
-colorscheme slate
-"設置寄存器
-set clipboard=unnamedplus
-"顯示行號
-set number
 
 "設置windows的剪下/貼上/複製熱鍵
 :vnoremap <C-c> "+y

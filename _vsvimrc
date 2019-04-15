@@ -1,25 +1,6 @@
 "需要這樣才能載入_vimrc 記得改user name
 source C:\Users\yich.lin\_vimrc
 
-set ai 
-
-"自動縮進寬度
-set sw=4 
-set ts=4 
-"關閉高亮顯示
-set nohlsearch   
-set is
-"忽略大小寫
-set ignorecase
-"設定顏色主題
-:colorscheme desert
-
-set backspace=indent,eol,start
-"默認的剪貼寄存器
-set clipboard=unnamed
-"顯示行號
-set number
-
 
 "重新生成選中項目的解決方案快捷鍵
 :nnoremap ,b :vsc Build.RebuildSelection<CR>
