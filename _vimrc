@@ -57,3 +57,7 @@ set autowrite
 :vnoremap p "xp
 
 :nnoremap . .<Esc>
+
+" auto format json files on save
+autocmd FileType json autocmd BufWritePre <buffer> %!python -m json.tool
+

@@ -21,7 +21,4 @@ set autoread | au CursorHold * checktime | call feedkeys("lh")
 :inoremap <C-c> "+y
 :inoremap <C-x> "+c
 
-" auto format json files on save
-autocmd FileType json autocmd BufWritePre <buffer> %!python -m json.tool
-
 
