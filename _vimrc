@@ -11,7 +11,6 @@ set ai
 "呼叫出git指令，定位到當前檔案為工作目錄
 :nnoremap ,git :cd %:p:h<CR>:!git
 :nnoremap ,gui :cd %:p:h<CR>:!gitk<CR> 
-:nnoremap ,fgui :cd %:p:h<CR>:!gitk %<CR> 
 
 "自動縮進寬度
 set sw=4 

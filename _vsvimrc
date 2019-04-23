@@ -16,12 +16,6 @@ source C:\Users\yich.lin\_vimrc
 :nnoremap ,n :vsc Window.NextDocumentWindow<CR>
 :nnoremap ,p :vsc Window.PreviousDocumentWindow<CR>
 
-"顯示錯誤列表的快捷鍵
-:nnoremap cl :vsc View.ErrorList<CR>
-:nnoremap cn :vsc View.NextError<CR>
-:nnoremap cp :vsc View.PreviousError<CR>
-
-
 "居中顯示查找結果
 :nnoremap n nzz
 :nnoremap N Nzz
@@ -75,6 +69,8 @@ source C:\Users\yich.lin\_vimrc
 
 "打開Error List
 :nnoremap ,el :vsc View.ErrorList<CR>
+:nnoremap ,ne :vsc View.NextError<CR>
+:nnoremap ,pe :vsc View.PreviousError<CR>
 
 "=================Resharper===============
 
