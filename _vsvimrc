@@ -6,8 +6,8 @@ source C:\Users\yich.lin\_vimrc
 
 
 "上下一個游標記錄
-:nnoremap <c-o> :vsc View.NavigateBackward<CR>
-:nnoremap <c-i> :vsc View.NavigateForward<CR>
+:nnoremap <c-o> :vsc ReSharper.ReSharper_NavigateBackward<CR>
+:nnoremap <c-i> :vsc ReSharper.ReSharper_NavigateForward<CR>
 
 "在tab間切換
 :nnoremap ,t :vsc Window.NextTab<CR>
