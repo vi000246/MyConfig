@@ -8,8 +8,8 @@ colorscheme slate
 
 set ai 
 
-"設定工作目錄為當前文件
-:nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
+"呼叫出git指令，定位到當前檔案為工作目錄
+:nnoremap ,git :cd %:p:h<CR>:!git 
 
 "自動縮進寬度
 set sw=4 
