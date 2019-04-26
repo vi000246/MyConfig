@@ -13,9 +13,6 @@ source C:\Users\yich.lin\_vimrc
 :nnoremap ,t :vsc Window.NextTab<CR>
 :nnoremap ,r :vsc Window.PreviousTab<CR>
 
-:nnoremap ,n :vsc Window.NextDocumentWindow<CR>
-:nnoremap ,p :vsc Window.PreviousDocumentWindow<CR>
-
 "居中顯示查找結果
 :nnoremap n nzz
 :nnoremap N Nzz
@@ -109,7 +106,7 @@ source C:\Users\yich.lin\_vimrc
 :nnoremap ,grf :vsc ReSharper.ReSharper_GotoRelatedFiles<CR>
 
 "Go to next member/tag
-:nnoremap ,gnm :vsc ReSharper.ReSharper_GotoNextMethod<CR>
+:nnoremap ,n :vsc ReSharper.ReSharper_GotoNextMethod<CR>
 
 "Go to Action 搜尋各種Resharper 命令
 :nnoremap ,ga :vsc ReSharper.ReSharper_GotoAction<CR>
@@ -118,7 +115,7 @@ source C:\Users\yich.lin\_vimrc
 :nnoremap ,gc :vsc ReSharper.ReSharper_Generate<CR>
 
 "Go to previous member/tag  HotKey:Alt+Down/Up
-:nnoremap ,gpm :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
+:nnoremap ,p :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
 
 "Navigate To 列出各種Go to 清單
 :nnoremap ,ag :vsc ReSharper.ReSharper_NavigateTo<CR>
