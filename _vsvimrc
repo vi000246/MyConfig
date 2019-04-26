@@ -82,7 +82,7 @@ source C:\Users\yich.lin\_vimrc
 :nnoremap ,gf :vsc ReSharper.ReSharper_GotoFile<CR>
 
 "Go to file member 搜尋此文件成員
-:nnoremap ,gm :vsc ReSharper.ReSharperr_GotoFileMember<CR>
+:nnoremap ,gm :vsc ReSharper.ReSharper_GotoFileMember<CR>
 
 "Go to text 搜尋文字
 :nnoremap ,gt :vsc ReSharper.ReSharper_GotoText<CR>
