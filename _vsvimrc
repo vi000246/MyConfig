@@ -59,15 +59,10 @@ source C:\Users\yich.lin\_vimrc
 "打開摺疊或者關閉摺疊
 :nnoremap <space> za
 
-"重新載入config
-:nnoremap ,sv :source C:\Users\yich.lin\_vsvimrc<CR>
-"開啟config
-:nnoremap ,ev :e C:\Users\yich.lin\_vsvimrc<CR>
-
 "打開Error List
 :nnoremap ,el :vsc View.ErrorList<CR>
-:nnoremap ,ne :vsc View.NextError<CR>
-:nnoremap ,pe :vsc View.PreviousError<CR>
+:nnoremap ,en :vsc View.NextError<CR>
+:nnoremap ,ep :vsc View.PreviousError<CR>
 
 "=================Resharper===============
 
@@ -145,7 +140,7 @@ source C:\Users\yich.lin\_vimrc
 :nnoremap ,sw :vsc ReSharper.ReSharper_SurroundWith<CR>
 
 "Parameter Information
-:nnoremap ,pi :vsc ReSharper.ReSharper_ParameterInfoShow<CR>
+:nnoremap ,if :vsc ReSharper.ReSharper_ParameterInfoShow<CR>
 
 
 "Inspect this 查看字段或屬性在那兒被賦值
