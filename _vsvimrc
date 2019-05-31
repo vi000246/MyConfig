@@ -64,6 +64,9 @@ source C:\Users\yich.lin\_vimrc
 :nnoremap ,en :vsc View.NextError<CR>
 :nnoremap ,ep :vsc View.PreviousError<CR>
 
+"打開所有折疊的code
+:nnoremap ,tao :vsc Edit.ToggleAllOutlining<CR>
+
 "=================Resharper===============
 
 "添加註釋

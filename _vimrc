@@ -59,6 +59,10 @@ set autowrite
 
 :nnoremap . .<Esc>
 
+:inoremap <C-Y> <C-r>
+"將redo 改成ctrl+Y
+:nnoremap <C-Y> <C-r>
+
 " auto format json files on save
 autocmd FileType json autocmd BufWritePre <buffer> %!python -m json.tool
 

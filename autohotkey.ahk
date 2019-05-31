@@ -33,7 +33,7 @@
 !p::   ;Alt+p 按一次開啟ptt，再按一次關閉ptt
 SetTitleMatchMode, 3 ;設定ahk匹配窗口標題的模式
 DetectHiddenWindows, On
-PttTitle :=.
+PttTitle :="批踢踢實業坊"
 IfWinNotExist, %PttTitle%
 {
 	Run, C:\Program Files (x86)\Google\Chrome\Application\chrome.exe --app="https://term.ptt.cc/"
