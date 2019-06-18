@@ -26,12 +26,6 @@ set clipboard=unnamed
 "顯示行號
 set number
 
-" 让配置变更立即生效
-:autocmd BufWritePost $MYVIMRC source $MYVIMRC
-
-"自动保存
-set autowrite 
-
 "退出插入模式
 :inoremap jj <esc>
 :nnoremap <c-j> <c-w>j
