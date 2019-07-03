@@ -8,6 +8,10 @@ colorscheme slate
 
 set ai 
 
+"設定插入模式和Normal模式的遊標樣式
+let &t_SI = "\e[5 q"
+let &t_EI = "\e[1 q"
+
 "呼叫出git指令，定位到當前檔案為工作目錄
 :nnoremap ,git :cd %:p:h<CR>:!git
 :nnoremap ,gui :cd %:p:h<CR>:!gitk<CR> 
