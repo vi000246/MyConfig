@@ -1,6 +1,9 @@
 "需要這樣才能載入_vimrc 記得改user name
 source C:\Users\yich.lin\_vimrc
 
+"設定buffer可以被隱藏，而不用存檔
+:set hidden
+
 "重新生成選中項目的解決方案快捷鍵
 :nnoremap ,b :vsc Build.RebuildSelection<CR>
 
@@ -38,7 +41,7 @@ source C:\Users\yich.lin\_vimrc
 :nnoremap cm :vsc File.OpenContainingFolder<CR>
 
 "快速查看方法定義 
-:nnoremap zj :vsc Edit.QuickInfo<CR>k
+:nnoremap zj :vsc Edit.QuickInfo<CR>
 
 "快速查看方法的所有定義,鼠標在方法parameter上的時候顯示的東西
 :nnoremap zk :vsc Edit.ParameterInfo<CR>
@@ -51,6 +54,13 @@ source C:\Users\yich.lin\_vimrc
 
 "打開查找結果2
 :nnoremap zu :vsc View.FindResults2<CR>
+
+"出現buffer list，方便快速切換
+:nnoremap <F5> :buffers<CR>:buffer<Space>
+
+"設定gvim出現buffer list
+set wildcharm=<C-Z>
+:nnoremap <F10> :b <C-Z>
 
 "可視模式中，使用 * 和 # 查找
 :vnoremap * "/y/<C-r>/<CR>
