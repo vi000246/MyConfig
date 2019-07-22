@@ -6,6 +6,9 @@
 syntax on
 colorscheme slate
 
+"設定buffer可以被隱藏，而不用存檔
+:set hidden
+
 set ai 
 
 "設定插入模式和Normal模式的遊標樣式
@@ -60,6 +63,9 @@ set number
 :inoremap <C-Y> <C-r>
 "將redo 改成ctrl+Y
 :nnoremap <C-Y> <C-r>
+
+ "出現buffer list，方便快速切換
+:nnoremap <F5> :buffers<CR>:buffer<Space>
 
 " auto format json files on save
 autocmd FileType json autocmd BufWritePre <buffer> %!python -m json.tool
