@@ -12,6 +12,9 @@ source C:\Users\yich.lin\_vimrc
 "在tab間切換
 :nnoremap ,t :vsc Window.NextTab<CR>
 :nnoremap ,r :vsc Window.PreviousTab<CR>
+:nnoremap <F1> :tabfir<CR>
+:nnoremap <F2> :tabl<CR>
+
 
 "居中顯示查找結果
 :nnoremap n nzz
@@ -65,7 +68,7 @@ source C:\Users\yich.lin\_vimrc
 :nnoremap ,ep :vsc View.PreviousError<CR>
 
 "打開所有折疊的code
-:nnoremap ,tao :vsc Edit.ToggleAllOutlining<CR>
+:nnoremap ,or :vsc Edit.ToggleAllOutlining<CR>
 
 "=================Resharper===============
 

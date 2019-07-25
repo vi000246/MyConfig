@@ -60,7 +60,6 @@ set number
 
 :nnoremap . .<Esc>
 
-:inoremap <C-Y> <C-r>
 "將redo 改成ctrl+Y
 :nnoremap <C-Y> <C-r>
 
