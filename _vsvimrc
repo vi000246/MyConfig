@@ -9,13 +9,11 @@ source C:\Users\yich.lin\_vimrc
 :nnoremap <c-o> :vsc ReSharper.ReSharper_NavigateBackward<CR>
 :nnoremap <c-i> :vsc ReSharper.ReSharper_NavigateForward<CR>
 
-"在tab間切換
-:nnoremap ,ft :tabfir<CR>
-:nnoremap ,lt :tabl<CR>
-
 "需要安裝Tab Studio和Navigator add-in
-:nnoremap ,t :vsc TabsStudio.NavigateToNextTab<CR>
-:nnoremap ,r :vsc TabsStudio.NavigateToPreviousTab<CR>
+:nnoremap ,ft :vsc TabsStudio.NavigateToTab1<CR>
+:nnoremap ,lt :vsc TabsStudio.NavigateToLastTab<CR>
+:nnoremap gt :vsc TabsStudio.NavigateToNextTab<CR>
+:nnoremap gT :vsc TabsStudio.NavigateToPreviousTab<CR>
 :nnoremap ,ht :vsc TabsStudio.MarkerToggleTabHighlighting<CR>
 :nnoremap ,dh :vsc TabsStudio.MarkerRemoveAllHighlighting<CR>
 :nnoremap ,cabl :vsc TabsStudio.MarkerCloseAllButHighlighted<CR>
