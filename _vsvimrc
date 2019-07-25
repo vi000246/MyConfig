@@ -16,7 +16,7 @@ source C:\Users\yich.lin\_vimrc
 "需要安裝Tab Studio和Navigator add-in
 :nnoremap ,t :vsc TabsStudio.NavigateToNextTab<CR>
 :nnoremap ,r :vsc TabsStudio.NavigateToPreviousTab<CR>
-:nnoremap ,ht :vsc TabsStudio.MarketToggleTabHighlighting<CR>
+:nnoremap ,ht :vsc TabsStudio.MarkerToggleTabHighlighting<CR>
 :nnoremap ,dh :vsc TabsStudio.MarkerRemoveAllHighlighting<CR>
 :nnoremap ,cabl :vsc TabsStudio.MarkerCloseAllButHighlighted<CR>
 :nnoremap ,cabt :vsc TabsStudio.CloseAllButThisTab<CR>
