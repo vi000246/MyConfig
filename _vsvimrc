@@ -10,11 +10,32 @@ source C:\Users\yich.lin\_vimrc
 :nnoremap <c-i> :vsc ReSharper.ReSharper_NavigateForward<CR>
 
 "在tab間切換
-:nnoremap ,t :vsc Window.NextTab<CR>
-:nnoremap ,r :vsc Window.PreviousTab<CR>
-:nnoremap <F1> :tabfir<CR>
-:nnoremap <F2> :tabl<CR>
+:nnoremap ,ft :tabfir<CR>
+:nnoremap ,lt :tabl<CR>
 
+"需要安裝Tab Studio和Navigator add-in
+:nnoremap ,t :vsc TabsStudio.NavigateToNextTab<CR>
+:nnoremap ,r :vsc TabsStudio.NavigateToPreviousTab<CR>
+:nnoremap 1gt :vsc TabsStudio.NavigateToTab1<CR>
+:nnoremap 2gt :vsc TabsStudio.NavigateToTab2<CR>
+:nnoremap 3gt :vsc TabsStudio.NavigateToTab3<CR>
+:nnoremap 4gt :vsc TabsStudio.NavigateToTab4<CR>
+:nnoremap 5gt :vsc TabsStudio.NavigateToTab5<CR>
+:nnoremap 6gt :vsc TabsStudio.NavigateToTab6<CR>
+:nnoremap 7gt :vsc TabsStudio.NavigateToTab7<CR>
+:nnoremap 8gt :vsc TabsStudio.NavigateToTab8<CR>
+:nnoremap 9gt :vsc TabsStudio.NavigateToTab9<CR>
+:nnoremap 10gt :vsc TabsStudio.NavigateToTab10<CR>
+:nnoremap 11gt :vsc TabsStudio.NavigateToTab11<CR>
+:nnoremap 12gt :vsc TabsStudio.NavigateToTab12<CR>
+:nnoremap 13gt :vsc TabsStudio.NavigateToTab13<CR>
+:nnoremap 14gt :vsc TabsStudio.NavigateToTab14<CR>
+:nnoremap 15gt :vsc TabsStudio.NavigateToTab15<CR>
+:nnoremap 16gt :vsc TabsStudio.NavigateToTab16<CR>
+:nnoremap 17gt :vsc TabsStudio.NavigateToTab17<CR>
+:nnoremap 18gt :vsc TabsStudio.NavigateToTab18<CR>
+:nnoremap 19gt :vsc TabsStudio.NavigateToTab19<CR>
+:nnoremap 20gt :vsc TabsStudio.NavigateToTab20<CR>
 
 "居中顯示查找結果
 :nnoremap n nzz
