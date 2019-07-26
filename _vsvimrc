@@ -13,6 +13,8 @@ source C:\Users\yich.lin\_vimrc
 :nnoremap ,ft :vsc TabsStudio.NavigateToTab1<CR>
 :nnoremap ,lt :vsc TabsStudio.NavigateToLastTab<CR>
 :nnoremap gt :vsc TabsStudio.NavigateToNextTab<CR>
+:nnoremap gw :vsc TabsStudio.NavigateToNextWindow<CR>
+:nnoremap gW :vsc TabsStudio.NavigateToPreviousWindow<CR>
 :nnoremap gT :vsc TabsStudio.NavigateToPreviousTab<CR>
 :nnoremap ,ht :vsc TabsStudio.MarkerToggleTabHighlighting<CR>
 :nnoremap ,dh :vsc TabsStudio.MarkerRemoveAllHighlighting<CR>
