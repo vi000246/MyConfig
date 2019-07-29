@@ -9,9 +9,6 @@ source C:\Users\yich.lin\_vimrc
 :nnoremap <c-o> :vsc ReSharper.ReSharper_NavigateBackward<CR>
 :nnoremap <c-i> :vsc ReSharper.ReSharper_NavigateForward<CR>
 
-:nnoremap <c-c> :vsc Edit.Copy<CR>
-:nnoremap <c-v> :vsc Edit.Paste<CR>
-:nnoremap <c-x> :vsc Edit.Cut<CR>
 
 "需要安裝Tab Studio和Navigator add-in
 :nnoremap ,ft :vsc TabsStudio.NavigateToTab1<CR>
