@@ -2,13 +2,12 @@
 source C:\Users\yich.lin\_vimrc
 
 "重新生成選中項目的解決方案快捷鍵
-:nnoremap ,b :vsc Build.RebuildSelection<CR>
+:nnoremap ,rb :vsc Build.RebuildSelection<CR>
 
 
 "上下一個游標記錄
-:nnoremap <c-o> :vsc ReSharper.ReSharper_NavigateBackward<CR>
-:nnoremap <c-i> :vsc ReSharper.ReSharper_NavigateForward<CR>
-
+":nnoremap <c-o> :vsc ReSharper.ReSharper_NavigateBackward<CR>
+":nnoremap <c-i> :vsc ReSharper.ReSharper_NavigateForward<CR>
 
 "需要安裝Tab Studio和Navigator add-in
 :nnoremap ,ft :vsc TabsStudio.NavigateToTab1<CR>
@@ -208,3 +207,27 @@ source C:\Users\yich.lin\_vimrc
 
 "Show Find Results
 :nnoremap ,sfr :vsc ReSharper.ReSharper_ShowFindResults<CR>
+
+"書籤
+:nnoremap ,b :vsc ReSharper_BookmarksBookmarksMenu<CR>
+:nnoremap ,cb :vsc ReSharper_BookmarksClearAll<CR>
+:nnoremap <c-0> :vsc ReSharper_BookmarksGoToBookmark0<CR>
+:nnoremap <c-1> :vsc ReSharper_BookmarksGoToBookmark1<CR>
+:nnoremap <c-2> :vsc ReSharper_BookmarksGoToBookmark2<CR>
+:nnoremap <c-3> :vsc ReSharper_BookmarksGoToBookmark3<CR>
+:nnoremap <c-4> :vsc ReSharper_BookmarksGoToBookmark4<CR>
+:nnoremap <c-5> :vsc ReSharper_BookmarksGoToBookmark5<CR>
+:nnoremap <c-6> :vsc ReSharper_BookmarksGoToBookmark6<CR>
+:nnoremap <c-7> :vsc ReSharper_BookmarksGoToBookmark7<CR>
+:nnoremap <c-8> :vsc ReSharper_BookmarksGoToBookmark8<CR>
+:nnoremap <c-9> :vsc ReSharper_BookmarksGoToBookmark9<CR>
+:nnoremap <c-s-0> :vsc ReSharper_BookmarksToggleBookmark0<CR>
+:nnoremap <c-s-1> :vsc ReSharper_BookmarksToggleBookmark1<CR>
+:nnoremap <c-s-2> :vsc ReSharper_BookmarksToggleBookmark2<CR>
+:nnoremap <c-s-3> :vsc ReSharper_BookmarksToggleBookmark3<CR>
+:nnoremap <c-s-4> :vsc ReSharper_BookmarksToggleBookmark4<CR>
+:nnoremap <c-s-5> :vsc ReSharper_BookmarksToggleBookmark5<CR>
+:nnoremap <c-s-6> :vsc ReSharper_BookmarksToggleBookmark6<CR>
+:nnoremap <c-s-7> :vsc ReSharper_BookmarksToggleBookmark7<CR>
+:nnoremap <c-s-8> :vsc ReSharper_BookmarksToggleBookmark8<CR>
+:nnoremap <c-s-9> :vsc ReSharper_BookmarksToggleBookmark9<CR>
