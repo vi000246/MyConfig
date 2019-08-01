@@ -6,8 +6,8 @@ source C:\Users\yich.lin\_vimrc
 
 
 "上下一個游標記錄
-":nnoremap <c-o> :vsc ReSharper.ReSharper_NavigateBackward<CR>
-":nnoremap <c-i> :vsc ReSharper.ReSharper_NavigateForward<CR>
+:nnoremap <c-o> :vsc ReSharper.ReSharper_NavigateBackward<CR>
+:nnoremap <c-i> :vsc ReSharper.ReSharper_NavigateForward<CR>
 
 "居中顯示查找結果
 :nnoremap n nzz
