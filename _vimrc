@@ -69,3 +69,13 @@ set number
 " auto format json files on save
 autocmd FileType json autocmd BufWritePre <buffer> %!python -m json.tool
 
+"開啟gvim時讓視窗最大化
+if has('win32')    
+	au GUIEnter * simalt ~x
+else    
+	au GUIEnter * call MaximizeWindow()
+endif 
+ 
+function! MaximizeWindow()    
+	silent !wmctrl -r :ACTIVE: -b add,maximized_vert,maximized_horz
+endfunction
