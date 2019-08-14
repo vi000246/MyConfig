@@ -95,6 +95,8 @@ source C:\Users\yich.lin\_vimrc
 
 "Go to implementation 前往類別實作 避免前往interface
 :nnoremap ,gi :vsc ReSharper.ReSharper_GotoImplementations<CR>
+"搜尋下一個同名的function 並前往類別實作
+:nnoremap ,gni /<c-r><c-w><CR>:vsc ReSharper.ReSharper_GotoImplementations<CR>
 
 "Go to related files 移至相關文件，用來查找css js等
 :nnoremap ,grf :vsc ReSharper.ReSharper_GotoRelatedFiles<CR>
