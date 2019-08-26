@@ -19,6 +19,12 @@ let &t_EI = "\e[1 q"
 :nnoremap ,git :cd %:p:h<CR>:!git
 :nnoremap ,gui :cd %:p:h<CR>:!gitk<CR> 
 
+"設定自動讀檔
+set autoread
+autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
+"當reload時出現提示訊息
+autocmd FileChangedShellPost *
+  \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
 "自動縮進寬度
 set sw=4 
 set ts=4 
