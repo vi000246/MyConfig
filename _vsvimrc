@@ -30,6 +30,9 @@ source C:\Users\yich.lin\_vimrc
 "尋找文字
 :nnoremap ck :vsc Edit.Find<CR>
 
+"儲存
+:nnoremap <c-s> :vsc File.SaveSelectedItems<CR>
+
 "打開文件所在文件夾
 :nnoremap cm :vsc File.OpenContainingFolder<CR>
 
