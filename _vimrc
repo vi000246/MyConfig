@@ -41,6 +41,10 @@ set number
 
 "退出插入模式
 :inoremap jj <esc>
+:vnoremap <Tab> <Esc>gV
+:onoremap <Tab> <Esc>
+:inoremap <Tab> <Esc>`^
+
 :nnoremap <c-j> <c-w>j
 :nnoremap <c-k> <c-w>k
 :nnoremap <c-l> <c-w>l
