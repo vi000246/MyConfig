@@ -2,16 +2,16 @@
 ;         Summary:                                                    |
 ;o----------------------o---------------------------------------------o
 ;|CapsLock;             | {ESC}  Especially Convient for vim user     |
-;|CaspLock + `          | {CapsLock}CapsLock Switcher as a Substituent|
-;|CapsLock + hjklwb     | Vim-Style Cursor Mover                      |
-;|CaspLock + iobf       | Convient Home/End PageUp/PageDn             |
-;|CaspLock + nm,.d       | Convient Delete Controller                 |
+;|CaspLock + `          | {CapsLock}CapsLock Switcher 大小寫開關      |
+;|CapsLock + hjklwb     | 仿Vim滑鼠遊標移動                           |
+;|CaspLock + iobf       |  Home/End PageUp/PageDn                     |
+;|CaspLock + nm,.d      | Convient Delete Controller                  |
 ;|CapsLock + Direction  | Mouse Move                                  |
 ;|CapsLock + Enter      | Mouse Click                                 |
 ;|CaspLock + {F1}~{F6}  | Media Volume Controller                     |
 ;|CapsLock + qsa        | Windows & Tags Control                      |
 ;|CapsLock + ;'[]       | Convient Key Mapping                        |
-;|CaspLock + egrcz       | Frequently Used Programs (Self Defined)     |
+;|CaspLock + egrcz      | Frequently Used Programs (Self Defined)     |
 ;|CaspLock + 123456     | Dev-Hotkey for Visual Studio (Self Defined) |
 ;|CapsLock + 67890-=    | Shifter as Shift                            |
 ;|Win      + \          | 關閉螢幕                                    |
