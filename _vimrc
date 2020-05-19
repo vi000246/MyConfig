@@ -76,6 +76,9 @@ set number
  "出現buffer list，方便快速切換
 :nnoremap <F5> :buffers<CR>:buffer<Space>
 
+"全選文字
+:nnoremap <C-a> <esc>ggVG<CR>
+
 " auto format json files on save
 autocmd FileType json autocmd BufWritePre <buffer> %!python -m json.tool
 
