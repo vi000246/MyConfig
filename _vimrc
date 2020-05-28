@@ -71,7 +71,7 @@ set number
 :nnoremap . .<Esc>
 
 "將redo 改成ctrl+Y
-:nnoremap <C-Y> <C-r>
+:nnoremap <C-y> <C-r>
 
  "出現buffer list，方便快速切換
 :nnoremap <F5> :buffers<CR>:buffer<Space>
