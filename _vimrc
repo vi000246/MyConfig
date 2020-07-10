@@ -79,6 +79,22 @@ set number
 "全選文字
 :nnoremap <C-a> <esc>ggVG<CR>
 
+"switch tab
+:noremap ,1 1gt
+:noremap ,2 2gt
+:noremap ,3 3gt
+:noremap ,4 4gt
+:noremap ,5 5gt
+:noremap ,6 6gt
+:noremap ,7 7gt
+:noremap ,8 8gt
+:noremap ,9 9gt
+:noremap ,0 :tablast<cr>
+
+"移至下一個tab 需要把所有ctrl+方向左右鍵的綁定全刪掉，才會套用這設定
+:noremap <C-Left> :tabprevious<CR>
+:noremap <C-Right> :tabnext<CR>
+
 " auto format json files on save
 autocmd FileType json autocmd BufWritePre <buffer> %!python -m json.tool
 
