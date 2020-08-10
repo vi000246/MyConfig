@@ -60,8 +60,8 @@ source C:\Users\yich.lin\_vimrc
 
 "打開Error List
 :nnoremap ,el :vsc View.ErrorList<CR>
-:nnoremap ,en :vsc View.NextError<CR>
-:nnoremap ,ep :vsc View.PreviousError<CR>
+:nnoremap ,en :cnext<CR>
+:nnoremap ,ep :cprevious<CR>
 
 "打開所有折疊的code
 :nnoremap ,or :vsc Edit.ToggleAllOutlining<CR>
