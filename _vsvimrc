@@ -63,6 +63,8 @@ source C:\Users\yich.lin\_vimrc
 :nnoremap ,en :cnext<CR>
 :nnoremap ,ep :cprevious<CR>
 
+:nnoremap ,,f Tools.InvokeAceJumpCommand<CR>
+
 "打開所有折疊的code
 :nnoremap ,or :vsc Edit.ToggleAllOutlining<CR>
 

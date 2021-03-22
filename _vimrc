@@ -1,3 +1,5 @@
+"設定leader key
+let mapleader = ","
 "忽略大小寫
 :set smartcase
 :set ignorecase
